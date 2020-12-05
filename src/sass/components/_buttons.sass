@@ -1,0 +1,51 @@
+.button
+    display: inline-block
+    background-color: $primary
+    border-radius: $bdrs
+    padding: 10px 20px
+    min-width: 100px
+    text-align: center
+    cursor: pointer
+    transition: opacity $duration ease-in-out, background-color $duration ease-in-out, border-color $duration ease-in-out
+    border: 1px solid transparent
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2)
+    @include noselect()
+
+    &,
+    span
+        color: #ffffff
+
+    &:hover
+        background-color: darken($primary, 8%)
+
+    &:active
+        transform: translateY(1px)
+        background-color: darken($primary, 12%)
+
+    &.danger
+        background-color: $danger
+        &:hover
+            background-color: darken($danger, 8%)
+
+        &:active
+            background-color: darken($danger, 12%)
+
+    &.success
+        background-color: $success
+        &:hover
+            background-color: darken($success, 8%)
+
+        &:active
+            background-color: darken($success, 12%)
+
+    &.orange
+        background-color: $orange
+        &:hover
+            background-color: darken($orange, 8%)
+
+        &:active
+            background-color: darken($orange, 12%)
+
+    &.disabled
+        opacity: .3
+        pointer-events: none

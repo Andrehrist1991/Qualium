@@ -1,0 +1,31 @@
+.main-menu
+    display: flex
+    align-items: center
+    &__itm
+        margin: 0 15px
+        &:first-child
+            margin-left: 0
+    &__link
+        text-transform: uppercase
+        color: #fff
+        font-weight: bold
+        font-size: 22px
+        display: inline-block
+        position: relative
+        padding: 0 0 2px
+        &::after
+            content: ''
+            position: absolute
+            height: 3px
+            background-color: #fff
+            bottom: 0
+            left: 50%
+            width: 0px
+            opacity: 0
+            @include trans
+
+        &.active
+            &::after
+                width: 100%
+                left: 0
+                opacity: 1
